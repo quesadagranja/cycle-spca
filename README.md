@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21611751.svg)](https://doi.org/10.5281/zenodo.21611751)
 # Calendar Graph-Fused Sparse PCA
 
 `calendar-gfspca` is a research implementation of sparse principal component
