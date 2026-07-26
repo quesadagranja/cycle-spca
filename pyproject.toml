@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calendar-gfspca"
+version = "0.1.0"
+description = "Calendar-Structured Graph-Fused Sparse PCA"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+]
+
+[tool.setuptools.packages.find]
+include = ["calendar_gfspca*"]
+

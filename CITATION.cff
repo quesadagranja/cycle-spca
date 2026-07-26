@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release corresponding to the version you used."
+title: "Calendar Graph-Fused Sparse PCA"
+abstract: >-
+  Research software for learning sparse, locally coherent principal components
+  from multi-periodic calendar data using graph total variation on a Cartesian
+  product of cycle graphs.
+type: software
+authors:
+  - family-names: "Quesada Granja"
+    given-names: "Carlos"
+    affiliation: "University of Alicante"
+version: 0.1.0
+date-released: 2026-07-26
+license: BSD-3-Clause
+keywords:
+  - sparse PCA
+  - graph total variation
+  - fused regularization
+  - periodic time series
+  - multi-seasonal data
+  - interpretable representation learning
+
