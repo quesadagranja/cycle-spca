@@ -1,0 +1,57 @@
+{
+  "name": "lambda_grid_v1",
+  "output_dir": "/home/cquesada/pca/results/lambda_grid_v1",
+  "input": {
+    "path": "/home/cquesada/pca/dataset/matrix_normalized.npy",
+    "imputed_column_1based": 3,
+    "max_imputed_hours": 72,
+    "feature_start_column_1based": 4,
+    "feature_end_column_1based": 8739,
+    "allow_pickle": false
+  },
+  "sampling": {
+    "sizes": [5000, 10000, 15000, 20000],
+    "seed": 20260809,
+    "extraction_batch_rows": 256,
+    "stored_dtype": "float64",
+    "hash_input_file": true
+  },
+  "grid": {
+    "lambda_l1": [0, 0.1, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 6, 8, 12, 16, 24],
+    "lambda_tv": [0, 0.1, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 6, 8, 12, 16, 24],
+    "seeds": [11, 23, 47, 71, 101]
+  },
+  "model": {
+    "n_components": 10,
+    "calendar_shape": [24, 7, 52],
+    "order": "C",
+    "center": true,
+    "score_solver": "coordinate",
+    "score_sweeps": 50,
+    "score_tolerance": 1e-7,
+    "outer_max_iter": 1000,
+    "outer_objective_tolerance": 1e-6,
+    "outer_reconstruction_tolerance": 1e-6,
+    "inner_max_iter": 20000,
+    "inner_check_interval": 25,
+    "epsilon_0": 1e-3,
+    "epsilon_min": 1e-6,
+    "epsilon_rho": 0.75,
+    "step_safety": 0.99,
+    "dual_step_scale": 1.0,
+    "loading_collapse_tolerance": 1e-10,
+    "score_collapse_tolerance": 1e-12,
+    "similarity_threshold": 0.995,
+    "condition_threshold": 1e12,
+    "max_reinitializations": 3,
+    "reinit_power_iterations": 5,
+    "initialization": "svd",
+    "svd_power_iterations": 2,
+    "svd_oversamples": 5,
+    "batch_size": 2048,
+    "sparsity_tolerance": 1e-10,
+    "effective_region_min_active_fraction": 0.005,
+    "effective_region_min_l1_fraction": 0.01,
+    "verbose": 1
+  }
+}
