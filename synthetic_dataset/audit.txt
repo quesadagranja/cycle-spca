@@ -1,0 +1,72 @@
+========================================================================
+SYNTHETIC CALENDAR-SPCA DATASET
+========================================================================
+N                  : 5000
+M                  : 8736
+K_true             : 5
+calendar shape     : (24, 7, 52)
+target SNR         : 5.000 dB
+actual SNR         : 4.999 dB
+noise std          : 0.00599966
+
+Samples by number of active components:
+  1: 500
+  2: 1500
+  3: 1750
+  4: 1000
+  5: 250
+
+Ground-truth support sizes:
+  interior            :  336
+  daily_crossing      :  350
+  weekly_crossing     :  168
+  annual_crossing     :  240
+  multi_boundary      :  252
+
+Pairwise overlap (fraction of smaller support):
+  interior             <-> daily_crossing      : 0.000
+  interior             <-> weekly_crossing     : 0.000
+  interior             <-> annual_crossing     : 0.000
+  interior             <-> multi_boundary      : 0.000
+  daily_crossing       <-> weekly_crossing     : 0.250
+  daily_crossing       <-> annual_crossing     : 0.200
+  daily_crossing       <-> multi_boundary      : 0.198
+  weekly_crossing      <-> annual_crossing     : 0.179
+  weekly_crossing      <-> multi_boundary      : 0.238
+  annual_crossing      <-> multi_boundary      : 0.225
+
+Absolute loading cosine similarities:
+  interior             <-> daily_crossing      : 0.000
+  interior             <-> weekly_crossing     : 0.000
+  interior             <-> annual_crossing     : 0.000
+  interior             <-> multi_boundary      : 0.000
+  daily_crossing       <-> weekly_crossing     : 0.145
+  daily_crossing       <-> annual_crossing     : 0.149
+  daily_crossing       <-> multi_boundary      : 0.149
+  weekly_crossing      <-> annual_crossing     : 0.128
+  weekly_crossing      <-> multi_boundary      : 0.204
+  annual_crossing      <-> multi_boundary      : 0.199
+
+Observed score correlations (conditional on joint activation):
+  interior             <-> daily_crossing      : +0.268
+  interior             <-> weekly_crossing     : +0.073
+  interior             <-> annual_crossing     : +0.028
+  interior             <-> multi_boundary      : +0.047
+  daily_crossing       <-> weekly_crossing     : +0.212
+  daily_crossing       <-> annual_crossing     : +0.103
+  daily_crossing       <-> multi_boundary      : +0.294
+  weekly_crossing      <-> annual_crossing     : +0.237
+  weekly_crossing      <-> multi_boundary      : +0.313
+  annual_crossing      <-> multi_boundary      : +0.306
+
+Files written:
+  README.md                    0.01 MiB
+  U_true.npy                   0.10 MiB
+  V_true.npy                   0.17 MiB
+  X.npy                      166.63 MiB
+  active_mask.npy              0.02 MiB
+  config.json                  0.00 MiB
+  generate_synthetic.py        0.02 MiB
+  truth_metadata.npz           0.04 MiB
+
+Done.

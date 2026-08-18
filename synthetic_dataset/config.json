@@ -1,0 +1,171 @@
+{
+  "seed": 20260818,
+  "N": 5000,
+  "M": 8736,
+  "K_true": 5,
+  "calendar_shape": [
+    24,
+    7,
+    52
+  ],
+  "flattening_order": "C",
+  "dtype": "float32",
+  "snr_db_target": 5.0,
+  "snr_db_actual": 4.998872917756424,
+  "counts_by_n_active": {
+    "1": 500,
+    "2": 1500,
+    "3": 1750,
+    "4": 1000,
+    "5": 250
+  },
+  "components": [
+    {
+      "name": "interior",
+      "description": "Interior control; crosses no periodic boundary.",
+      "h": {
+        "start": 16,
+        "length": 6,
+        "taper": 1
+      },
+      "d": {
+        "start": 1,
+        "length": 4,
+        "taper": 1
+      },
+      "w": {
+        "start": 20,
+        "length": 14,
+        "taper": 2
+      }
+    },
+    {
+      "name": "daily_crossing",
+      "description": "Crosses the within-day boundary.",
+      "h": {
+        "start": 22,
+        "length": 5,
+        "taper": 1
+      },
+      "d": {
+        "start": 0,
+        "length": 5,
+        "taper": 1
+      },
+      "w": {
+        "start": 0,
+        "length": 14,
+        "taper": 2
+      }
+    },
+    {
+      "name": "weekly_crossing",
+      "description": "Crosses the Sunday--Monday boundary.",
+      "h": {
+        "start": 0,
+        "length": 6,
+        "taper": 1
+      },
+      "d": {
+        "start": 6,
+        "length": 2,
+        "taper": 0
+      },
+      "w": {
+        "start": 0,
+        "length": 14,
+        "taper": 2
+      }
+    },
+    {
+      "name": "annual_crossing",
+      "description": "Crosses the end--beginning annual boundary.",
+      "h": {
+        "start": 1,
+        "length": 6,
+        "taper": 1
+      },
+      "d": {
+        "start": 0,
+        "length": 4,
+        "taper": 1
+      },
+      "w": {
+        "start": 48,
+        "length": 10,
+        "taper": 2
+      }
+    },
+    {
+      "name": "multi_boundary",
+      "description": "Crosses the daily, weekly, and annual boundaries simultaneously.",
+      "h": {
+        "start": 21,
+        "length": 7,
+        "taper": 1
+      },
+      "d": {
+        "start": 5,
+        "length": 4,
+        "taper": 1
+      },
+      "w": {
+        "start": 48,
+        "length": 9,
+        "taper": 2
+      }
+    }
+  ],
+  "component_strength": [
+    1.0,
+    0.9,
+    1.05,
+    0.85,
+    0.95
+  ],
+  "score_correlation_target": [
+    [
+      1.0,
+      0.25,
+      0.1,
+      0.05,
+      0.1
+    ],
+    [
+      0.25,
+      1.0,
+      0.2,
+      0.1,
+      0.35
+    ],
+    [
+      0.1,
+      0.2,
+      1.0,
+      0.2,
+      0.3
+    ],
+    [
+      0.05,
+      0.1,
+      0.2,
+      1.0,
+      0.3
+    ],
+    [
+      0.1,
+      0.35,
+      0.3,
+      0.3,
+      1.0
+    ]
+  ],
+  "notes": [
+    "X is generated directly in centered form.",
+    "Ground-truth loadings are fixed across observations.",
+    "No sample-specific loading deformation is applied.",
+    "Components 2--5 have deliberately overlapping supports.",
+    "Component 1 is a non-boundary-crossing interior control.",
+    "Component 5 crosses all three periodic boundaries."
+  ]
+}
