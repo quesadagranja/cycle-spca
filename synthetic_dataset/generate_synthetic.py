@@ -32,7 +32,7 @@ SNR_DB = 5.0
 DTYPE = np.float32
 BATCH_SIZE = 250
 
-OUTPUT_DIR = Path("synthetic_calendar_spca")
+OUTPUT_DIR = Path(__file__).resolve().parent
 
 rng = np.random.default_rng(SEED)
 
